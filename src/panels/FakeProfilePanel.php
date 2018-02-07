@@ -14,14 +14,10 @@ class FakeProfilePanel extends PanelComponent
     {
         parent::init();
 
-        $seg = $this->add(['ui' => ' segment']);
-        $msg = $seg->add([
+        $msg = $this->add([
                              'Message',
-                             'Profile not available!',
-                             'type' => 'warning',
-                             'icon' => 'warning',
+                             'Welcome to Atk-Worpress Demo plugin!',
                          ]);
-        $msg->text->addParagraph('Sorry, it\'s not possible to change "User Profile" in demo mode.');
 
         $this->add(['Header', 'Available Demo Pages']);
 
