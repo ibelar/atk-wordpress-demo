@@ -1,4 +1,4 @@
-# Atk-wordpress starter plugin
+# Atk-wordpress demo plugin
 
 This wordpress plugin is done using Agile Toolkit and the Agile Toolkit integration for Wordpress.
 
