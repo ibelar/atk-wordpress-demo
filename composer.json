@@ -1,0 +1,23 @@
+{
+  "description": "Demo plugin for atk-wordpress",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Alain Belair"
+    }
+  ],
+  "require": {
+    "ibelar/atk-wordpress": "^1.1",
+    "fzaninotto/faker": "*",
+    "psr/log": "^1.0"
+  },
+  "config": {
+    "autoloader-suffix": "atkdemo",
+    "prepend-autoloader": false
+  },
+  "autoload": {
+    "psr-4": {
+      "atkdemo\\" : "src/"
+    }
+  }
+}
