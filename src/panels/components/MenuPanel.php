@@ -5,7 +5,6 @@
 
 namespace atkdemo\panels\components;
 
-
 use atkwp\components\PanelComponent;
 
 class MenuPanel extends PanelComponent
@@ -14,7 +13,7 @@ class MenuPanel extends PanelComponent
     {
         parent::init();
         $m = $this->add('Menu');
-        $m->addItem('foo', 'foo.php' /*new \atk4\ui\jsNotify('Foo on it\'s way!', $this)*/);
+        $m->addItem('foo', 'foo.php');
         $m->addItem('bar');
         $m->addItem('baz');
         $m->add(['DropDown', 'huhhuh', 'js' => ['on' => 'hover']])->setSource(['a', 'b', 'c']);

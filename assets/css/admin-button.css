@@ -1,0 +1,22 @@
+#wp-admin-bar-atkdemo-code {
+    background-color: #2185d0 !important;
+    color: white !important;
+}
+
+@media screen and (max-width: 782px) {
+    #wpadminbar #wp-admin-bar-atkdemo-code > .ab-item:before {
+        display: block;
+        text-indent: 0;
+        font: normal 32px/1 dashicons;
+        speak: none;
+        top: 7px;
+        width: 52px;
+        text-align: center;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    #wpadminbar li#wp-admin-bar-atkdemo-code {
+        display: block
+    }
+}

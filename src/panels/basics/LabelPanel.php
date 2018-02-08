@@ -5,7 +5,6 @@
 
 namespace atkdemo\panels\basics;
 
-
 use atkwp\components\PanelComponent;
 
 class LabelPanel extends PanelComponent

@@ -5,7 +5,6 @@
 
 namespace atkdemo\panels\basics;
 
-
 use atkwp\components\PanelComponent;
 use atk4\ui\Button;
 use atk4\ui\Header;

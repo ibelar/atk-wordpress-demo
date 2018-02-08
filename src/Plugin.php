@@ -12,7 +12,6 @@ use atkwp\AtkWp;
 
 class Plugin extends AtkWp implements PluginInterface
 {
-
     /**
      * The options name for this plugin
      * saved in WP options table.

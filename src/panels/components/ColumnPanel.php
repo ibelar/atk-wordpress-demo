@@ -28,8 +28,6 @@ class ColumnPanel extends PanelComponent
         $cn = $columns->addColumn();
         $cn->add(['Header', 'Third', 'size' => 4]);
         $cn->add(['LoremIpsum', 1]);
-        //$columns->addColumn()->add(['LoremIpsum', 1]);
-        //$columns->addColumn()->add(['LoremIpsum', 1]);
 
         $page->add(['Header', 'Specifying widths, using rows or automatic flow']);
 

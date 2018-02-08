@@ -5,7 +5,6 @@
 
 namespace atkdemo\ui;
 
-
 use atk4\ui\View;
 
 class Box extends View

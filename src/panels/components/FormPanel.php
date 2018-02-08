@@ -15,7 +15,7 @@ class FormPanel extends PanelComponent
 
         $tabs = $this->add('Tabs');
 
-////////////////////////////////////////////
+        ////////////////////////////////////////////
         $tab = $tabs->addTab('Basic Use');
 
         $tab->add(['Header', 'Very simple form']);
@@ -48,7 +48,7 @@ class FormPanel extends PanelComponent
             echo 'date1 = '.print_r($form->model['date1'], true).' and date2 = '.print_r($form->model['date2'], true);
         });
 
-////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////
         $tab = $tabs->addTab('Handler Output');
 
         $tab->add(['Header', 'Form can respond with manually generated error']);
@@ -83,7 +83,7 @@ class FormPanel extends PanelComponent
             return $field->jsInput()->val('random is '.rand(1, 100));
         });
 
-/////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////
         $tab = $tabs->addTab('Handler Safety');
 
         $tab->add(['Header', 'Form handles errors (PHP 7.0+)', 'size' => 2]);
@@ -113,17 +113,7 @@ class FormPanel extends PanelComponent
             return 'somehow it did not crash';
         });
 
-//        $form->add(['Button', 'Modal Test', 'secondary'])->on('click', $form->add('Modal')
-//                                                                            ->set(function ($p) {
-//                                                                                $form = $p->add('Form');
-//                                                                                $form->addField('email');
-//                                                                                $form->onSubmit(function ($form) {
-//                                                                                    throw new \atk4\core\Exception(['testing', 'arg1'=>'val1']);
-//                                                                                    return 'somehow it did not crash';
-//                                                                                });
-//                                                                            })->show());
-
-/////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////
         $tab = $tabs->addTab('Complex Examples');
 
         $tab->add(['Header', 'Conditional response']);

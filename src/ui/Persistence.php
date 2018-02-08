@@ -5,7 +5,6 @@
 
 namespace atkdemo\ui;
 
-
 use atk4\ui\Persistence\UI;
 
 class Persistence extends UI

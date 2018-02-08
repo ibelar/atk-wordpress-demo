@@ -18,3 +18,5 @@
  * Ex: test.css file is located under assets/css/test.css then the path value should be 'test'
  *
  *========================================================================================================================*/
+
+$config['enqueue']['admin']['css'] = ['admin-button'];

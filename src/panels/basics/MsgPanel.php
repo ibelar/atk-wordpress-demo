@@ -5,7 +5,6 @@
 
 namespace atkdemo\panels\basics;
 
-
 use atkwp\components\PanelComponent;
 
 class MsgPanel extends PanelComponent
@@ -42,6 +41,5 @@ class MsgPanel extends PanelComponent
         $bar_icon->add(['Button', 'icon' => 'pointing right']);
         $bar_icon->add(['Button', 'icon' => 'asterisk loading']);
         $bar_icon->add(['Button', 'icon' => 'vertically flipped cloud']);
-
     }
 }

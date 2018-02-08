@@ -5,7 +5,6 @@
 
 namespace atkdemo\panels\components;
 
-
 use atkwp\components\PanelComponent;
 
 class PaginatorPanel extends PanelComponent

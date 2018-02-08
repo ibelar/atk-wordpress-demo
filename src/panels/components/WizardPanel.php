@@ -5,7 +5,6 @@
 
 namespace atkdemo\panels\components;
 
-
 use atk4\ui\jsNotify;
 use atkwp\components\PanelComponent;
 use atkwp\ui\WpWizard;
@@ -16,8 +15,6 @@ class WizardPanel extends PanelComponent
     {
         parent::init();
         $t = $this->add(new WpWizard());
-
-
 
         // First step will automatcally be active when you open page first. It
         // will contain the 'Next' button with a link.

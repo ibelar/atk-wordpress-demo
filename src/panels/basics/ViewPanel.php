@@ -18,11 +18,6 @@ class ViewPanel extends PanelComponent
 
         $this->add($msg);
 
-/*        $msg = $this->add([
-            'Message',
-            'Agile Toolkit for Wordpress!',
-        ]);*/
-
         $this->add(['Header', 'Default view has no styling']);
         $this->add('View')->set('just a <div> element');
 

@@ -36,7 +36,7 @@ class TablePanel extends PanelComponent
         ]));
 
         $table->addColumn('date');
-        $table->addColumn('salary', new \atk4\ui\TableColumn\Money()); //->addClass('right aligned single line', 'all'));
+        $table->addColumn('salary', new \atk4\ui\TableColumn\Money());
 
         $table->addHook('getHTMLTags', function ($table, $row) {
             if ($row->id == 1) {
@@ -49,7 +49,6 @@ class TablePanel extends PanelComponent
         $table->addTotals(['name' => 'Totals:', 'salary' => ['sum']]);
 
         ///////////////////////////////////////////////////
-
         $this->add(['Header', 'Table with data from array']);
 
         $my_array = [
@@ -62,8 +61,7 @@ class TablePanel extends PanelComponent
         $table = $this->add('Table');
         $table->setSource($my_array, false);
 
-        $table->addColumn('surname'/*, ['Link', 'url' => 'details.php?surname={$surname}']*/);
+        $table->addColumn('surname');
         $table->addColumn('birthdate', null, ['type' => 'date']);
-
     }
 }
