@@ -7,14 +7,18 @@ namespace atkdemo\panels\components;
 
 use atk4\ui\jsNotify;
 use atkwp\components\PanelComponent;
-use atkwp\ui\WpWizard;
+
+//use atkdemo\ui\Wizard;
+//use atkwp\ui\WpWizard;
+use atk4\ui\Wizard;
 
 class WizardPanel extends PanelComponent
 {
     public function init()
     {
         parent::init();
-        $t = $this->add(new WpWizard());
+        $this->app->stickyGet('page');
+        $t = $this->add(new Wizard());
 
         // First step will automatcally be active when you open page first. It
         // will contain the 'Next' button with a link.
@@ -36,19 +40,20 @@ class WizardPanel extends PanelComponent
             $f->onSubmit(function ($f) use ($p) {
                 $p->memorize('dsn', $f->model['dsn']);
 
-                return new jsNotify('good', $this);
-                //return $p->jsNext();
+                return $p->jsNext();
             });
         });
 
         // Alternatvely, you may access buttonNext , buttonPrev properties of a wizard
         // and set a custom js action or even set a different link. You can use recall()
         // to access some values that were recorded on another steps.
-        $t->addStep(['Select Model', 'description'=>'"Country" or "Stat"', 'icon'=>'table'], function ($p) {
+        $t->addStep(['Select Model', 'description'=>'"Country" or "Stats"', 'icon'=>'table'], function ($p) {
             if (isset($_GET['name'])) {
                 $p->memorize('model', $_GET['name']);
-                header('Location: '.$p->urlNext());
-                exit;
+                $p->add(['Message', 'Warning', 'warning'])->text
+                    ->addParagraph('You are about to add '.$_GET['name']. ' to your table. Click next to continue.');
+
+                return $p->jsNext();
             }
 
             $c = $p->add('Columns');
@@ -57,7 +62,7 @@ class WizardPanel extends PanelComponent
             $c->addColumn()->add(['Message', 'Information', 'info'])->text
                 ->addParagraph('Selecting which model you would like to import into your DSN. If corresponding table already exist, we might add extra fields into it. No tables, columns or rows will be deleted.');
 
-            $t->setSource(['Country', 'Stat']);
+            $t->setSource(['Country', 'Stats']);
 
             // should work after url() fix
             $t->addDecorator('name', ['Link', [], ['name']]);

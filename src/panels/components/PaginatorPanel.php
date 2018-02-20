@@ -13,6 +13,9 @@ class PaginatorPanel extends PanelComponent
     {
         parent::init();
 
+        $this->add(['Header', 'Paginator tracks its own position']);
+        $this->add(['Paginator', 'total' => 40, 'urlTrigger' => 'pg']);
+
         // Dynamically reloading paginator
         $this->add(['Header', 'Dynamic reloading']);
         $seg = $this->add(['View', 'ui' => 'blue segment']);

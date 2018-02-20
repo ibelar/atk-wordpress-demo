@@ -8,6 +8,7 @@ namespace atkdemo\panels\actions;
 use atk4\ui\Button;
 use atk4\ui\Header;
 use atkwp\components\PanelComponent;
+use atkwp\helpers\WpUtil;
 
 class JsPanel extends PanelComponent
 {
@@ -25,11 +26,7 @@ class JsPanel extends PanelComponent
         $b = $this->add(new Button(['id' => 'b2']))->set('Hide on click Button');
         $b->js('click')->hide();
 
-        $this->add(['Button', 'Redirect'])->on('click', $this->app->jsRedirect(['foo'=>'bar']));
-
-        if (isset($_GET['foo']) && $_GET['foo'] == 'bar') {
-            $this->redirect(['foo'=>'baz']);
-        }
+        $this->add(['Button', 'Redirect'])->on('click', $this->app->jsRedirect(WpUtil::getBaseAdminUrl()));
 
         $this->add(new Header('js() method'));
 
