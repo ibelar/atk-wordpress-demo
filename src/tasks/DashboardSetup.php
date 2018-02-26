@@ -33,6 +33,7 @@ class DashboardSetup extends Task
      */
     public function dashboardWelcome()
     {
+        $this->plugin->activateLoader();
         echo (new Welcome())->getHTML();
     }
 }

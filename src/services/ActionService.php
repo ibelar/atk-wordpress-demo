@@ -43,6 +43,7 @@ class ActionService
             if ($page = @$_GET['page']){
                 if ($page !== 'profile-index') {
                     if ($panel = $plugin->componentCtrl->searchComponentByType('panel', $page, 'slug')) {
+                        $plugin->activateLoader();
                         $button = new View(['View source', 'template' => new Template('<span class="ab-icon dashicon-before dashicons-media-code"></span><span class="ab-label">{$Content}</span>')]);
                         $uses = str_replace('\\', '/', $panel['uses']);
                         $href = str_replace('atkdemo', $plugin->getConfig('plugin/code_base_url'), $uses).'.php';
