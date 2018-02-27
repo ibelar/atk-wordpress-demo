@@ -13,7 +13,7 @@ class TabPanel extends PanelComponent
     {
         parent::init();
 
-        $t = $this->add('Tabs');
+        $t = $this->add(['Tabs', 'needAjax' => true]);
 
         // static tab
         $t->addTab('Hello')->add('HelloWorld');
@@ -22,6 +22,6 @@ class TabPanel extends PanelComponent
         // dynamic tab
         $t->addTab('Dynamic Lorem Ipsum', function ($tab) {
             $tab->add(['LoremIpsum', 'size' => 2]);
-        });
+        }, true);
     }
 }
