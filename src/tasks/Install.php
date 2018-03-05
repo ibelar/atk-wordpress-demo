@@ -13,6 +13,7 @@ class Install extends Task
 
     public function checkVersion()
     {
+        $this->plugin->activateLoader();
         $optionModel = new Options($this->plugin->getDbConnection());
         $options = $optionModel->getOptionValue($this->plugin->getOptionName(), null);
 

@@ -25,6 +25,7 @@ class Plugin extends AtkWp implements PluginInterface
 
     public function init()
     {
+        session_start();
         $this->setDbConnection();
         $this->optionName = "_{$this->getPluginName()}_options";
         $this->setAppUiPersistence(new ui\Persistence());
