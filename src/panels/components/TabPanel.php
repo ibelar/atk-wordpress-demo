@@ -21,7 +21,8 @@ class TabPanel extends PanelComponent
 
         // dynamic tab
         $t->addTab('Dynamic Lorem Ipsum', function ($tab) {
+            $tab->add(['Message', 'Every time you come to this tab, you will see a different text']);
             $tab->add(['LoremIpsum', 'size' => 2]);
-        }, true);
+        });
     }
 }

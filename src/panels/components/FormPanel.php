@@ -40,7 +40,7 @@ class FormPanel extends PanelComponent
         $g->addField('gender', ['DropDown', 'values' => ['Female', 'Male']]);
 
         $tab->add(['Header', 'Comparing Field type vs Decorator class']);
-        $form = $this->add('Form');
+        $form = $tab->add('Form');
         $form->addField('date1', null, ['type' => 'date']);
         $form->addField('date2', ['Calendar', 'type' => 'date']);
 

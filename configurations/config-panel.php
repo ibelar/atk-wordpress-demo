@@ -129,19 +129,6 @@ $config['panel'] = [
             'js'           => [],
             'css'          => [],
     ],
-    'basic-test' => [
-        'type'         => 'sub-panel',
-        'parent'       => 'basic',
-        'page'         => 'Test',
-        'menu'         => 'Test',
-        'slug'         => 'basic-test-index',
-        'uses'         => __NAMESPACE__ . '\\panels\\TestPanel',
-        'capabilities' => 'manage_options',
-        'position'     => null,
-        'icon'         =>  '',
-        'js'           => [],
-        'css'          => [],
-    ],
     //////////////////////////////////////////////////////////////
     'component' => [
             'type'         => 'panel',
