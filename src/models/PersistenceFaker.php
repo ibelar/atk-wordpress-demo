@@ -30,13 +30,13 @@ class PersistenceFaker extends Persistence
         }
     }
 
-    public function export($m, $fields = [])
+    public function export(Model $m, $fields = [])
     {
         if (!$fields) {
-            foreach ($m->elements as $name => $e) {
-                if ($e instanceof \atk4\data\Field) {
+            foreach ($m->getFields() as $name => $e) {
+                //if ($e instanceof \atk4\data\Field) {
                     $fields[] = $name;
-                }
+                //}
             }
         }
 
@@ -51,7 +51,7 @@ class PersistenceFaker extends Persistence
                     continue;
                 }
 
-                $actual = $m->getElement($field)->actual;
+                $actual = $m->getField($field)->actual;
                 if ($actual) {
                     $type = $actual;
                 }
